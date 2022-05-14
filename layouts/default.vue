@@ -4,8 +4,8 @@
 
 <template>
   <div>
-    <h1>header</h1>
-    <slot />
-    <h3>footer</h3>
+    <GlobalAppHeader></GlobalAppHeader>
+    <slot></slot>
+    <GlobalAppFooter></GlobalAppFooter>
   </div>
 </template>
