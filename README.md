@@ -59,3 +59,6 @@ https://daisyui.com/docs/install/
 npm i daisyui
 # add plugin in tailwind config
 ```
+
+
+https://v3.nuxtjs.org/api/configuration/nuxt.config

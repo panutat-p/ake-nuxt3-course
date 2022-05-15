@@ -16,8 +16,8 @@ definePageMeta({
       <Meta name="description" content="about"/>
     </Head>
     <div class="container px-5 mx-24 my-10">
-      <h1 class="text-5xl font-bold">About Us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis incidunt inventore maiores nisi,
+      <h1 class="text-5xl font-bold custom-pink-text">About Us</h1>
+      <p class="font-sarabun">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis incidunt inventore maiores nisi,
         non quisquam reiciendis rerum sint soluta. Dicta dignissimos dolor, ipsum numquam porro quibusdam ratione soluta
         ullam!</p>
     </div>
