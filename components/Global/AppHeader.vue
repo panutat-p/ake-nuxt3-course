@@ -5,9 +5,15 @@
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
       <ul class="menu menu-horizontal p-0">
-        <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/contact">Contact Us</NuxtLink></li>
-        <li><NuxtLink to="/about">About</NuxtLink></li>
+        <li>
+          <NuxtLink to="/">Home</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/contact">Contact Us</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/about">About</NuxtLink>
+        </li>
         <li tabindex="0">
           <a>
             Parent
@@ -47,3 +53,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.router-link-active {
+  color: red;
+}
+</style>
