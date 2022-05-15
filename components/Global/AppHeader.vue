@@ -57,5 +57,6 @@
 <style scoped>
 .router-link-active {
   color: red;
+  background-color: white;
 }
 </style>
