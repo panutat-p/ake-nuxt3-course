@@ -62,3 +62,5 @@ npm i daisyui
 
 
 https://v3.nuxtjs.org/api/configuration/nuxt.config
+
+https://v3.nuxtjs.org/guide/directory-structure/composables/
