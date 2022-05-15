@@ -2,6 +2,11 @@
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
+# Course
+https://gitlab.com/codingthailand/nuxt3-app
+
+https://drive.google.com/drive/folders/1iNf4KjGlaTjtZNu2QyhoYEnmgUp-y7Sk
+
 ## Setup
 
 Make sure to install the dependencies:
