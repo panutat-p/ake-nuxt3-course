@@ -21,6 +21,9 @@ definePageMeta({
         non quisquam reiciendis rerum sint soluta. Dicta dignissimos dolor, ipsum numquam porro quibusdam ratione soluta
         ullam!</p>
     </div>
+    <div class="mx-28">
+      <img src="images/panda-object.png" alt="panda object">
+    </div>
     <div class="card w-96 bg-base-100 shadow-xl mx-32">
       <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
       <div class="card-body">
