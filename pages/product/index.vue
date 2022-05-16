@@ -4,10 +4,8 @@ definePageMeta({
   title: 'contact',
 })
 
-const isLoading = ref(true);
-const {products} = await useGetProduct();
+const {products, pending} = await useGetProduct();
 console.log(products);
-isLoading.value = false;
 
 </script>
 
@@ -21,17 +19,23 @@ isLoading.value = false;
         <th>Title</th>
         <th>Detail</th>
         <th>Image</th>
+        <th>Action</th>
       </tr>
       </thead>
-      <div v-if="isLoading">
+      <div v-if="pending">
         <button class="btn loading">loading</button>
       </div>
       <tbody v-if="products?.data?.length">
       <tr v-for="item in products.data" v-bind:key="item.id">
-        <th>{{ item.id }}</th>
-        <th>{{ item.title }}</th>
-        <th>{{ item.detail }}</th>
-        <th><img v-bind:src="item.picture" alt="course picture" width="60"></th>
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.detail }}</td>
+        <td><img v-bind:src="item.picture" alt="course picture" width="60"></td>
+        <td>
+          <NuxtLink class="link link-accent" v-bind:to="/product/+item.id">
+            View
+          </NuxtLink>
+        </td>
       </tr>
       </tbody>
     </table>
