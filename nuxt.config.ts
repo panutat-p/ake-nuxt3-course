@@ -16,5 +16,11 @@ export default defineNuxtConfig({
     css: [
         // Global CSS files
         '@/assets/css/main.css',
-    ]
+    ],
+    runtimeConfig: {
+        apiKey: 'test-api-key-1234',
+        public: {
+            baseURL: '/myweb', // Exposed to the frontend
+        }
+    }
 })

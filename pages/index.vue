@@ -2,6 +2,10 @@
 definePageMeta({
   layout: 'default'
 })
+
+const config = useRuntimeConfig();
+console.log(config.public.baseURL);
+console.log(config.apiKey); // got undefined
 </script>
 
 <template>
