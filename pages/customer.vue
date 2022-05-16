@@ -3,6 +3,11 @@
 // const {data, pending} = await useLazyAsyncData('user', () => $fetch('api/contact')); // does not block navigation
 const {data} = await useFetch('api/contact');
 console.log(data);
+const {data: apiVersion, pending: isPending} = await useLazyFetch(
+    'https://api.codingthailand.com/api/version',
+    { pick: ['data'] }
+);
+
 </script>
 
 <template>
@@ -23,9 +28,17 @@ console.log(data);
         {{ data?.apiKey }}
       </div>
       <div class="mx-24">
-        <ul v-for="item in data.user" v-bind:key="item.id">
+        <ul v-for="item in data?.user" v-bind:key="item.id">
           <li>{{ item.id }} - {{ item.name }}</li>
         </ul>
+      </div>
+    </section>
+    <section v-if="isPending">
+      <button class="btn loading">loading</button>
+    </section>
+    <section>
+      <div class="mx-24 mt-10">
+        API Version: {{ apiVersion?.data?.version }}
       </div>
     </section>
   </main>
