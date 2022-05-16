@@ -66,3 +66,5 @@ https://v3.nuxtjs.org/api/configuration/nuxt.config
 https://v3.nuxtjs.org/guide/directory-structure/composables/
 
 https://v3.nuxtjs.org/guide/features/runtime-config/
+
+https://v3.nuxtjs.org/guide/features/data-fetching/
