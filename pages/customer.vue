@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const {data} = await useAsyncData('user', () => $fetch('api/contact'));
+// const {data} = await useAsyncData('user', () => $fetch('api/contact'));
+const {data, pending} = await useLazyAsyncData('user', () => $fetch('api/contact')); // does not block navigation
 console.log(data);
+console.log(pending);
 </script>
 
 <template>
@@ -16,13 +18,18 @@ console.log(data);
         non quisquam reiciendis rerum sint soluta. Dicta dignissimos dolor, ipsum numquam porro quibusdam ratione soluta
         ullam!</p>
     </div>
-    <div class="mx-24">
-      {{ data?.apiKey }}
-    </div>
-    <div class="mx-24">
-      <ul v-for="item in data.user" v-bind:key="item.id">
-        <li>{{ item.id }} - {{ item.name }}</li>
-      </ul>
-    </div>
+    <section v-if="pending">
+      <button class="btn loading">loading</button>
+    </section>
+    <section v-else>
+      <div class="mx-24">
+        {{ data?.apiKey }}
+      </div>
+      <div class="mx-24">
+        <ul v-for="item in data.user" v-bind:key="item.id">
+          <li>{{ item.id }} - {{ item.name }}</li>
+        </ul>
+      </div>
+    </section>
   </main>
 </template>
