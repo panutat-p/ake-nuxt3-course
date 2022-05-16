@@ -9,6 +9,9 @@
           <NuxtLink to="/">Home</NuxtLink>
         </li>
         <li>
+          <NuxtLink to="/product">Products</NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/customer">Customer</NuxtLink>
         </li>
         <li>
