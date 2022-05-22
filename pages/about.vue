@@ -3,7 +3,7 @@
 We can omit definePageMeta
 because file name is default.vue
  */
-import {showDate} from "~/composables/use=example";
+import {showDate} from "~/composables/use-example";
 
 definePageMeta({
   layout: 'default',
