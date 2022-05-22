@@ -1,4 +1,11 @@
 <script setup lang="ts">
+// middleware
+// guard this route when token not found in local storage
+// refer to auth.ts
+definePageMeta({
+  middleware: ['auth']
+})
+
 const {r} = await useGetProfile();
 </script>
 
