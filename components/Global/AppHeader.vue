@@ -20,6 +20,9 @@
         <li>
           <NuxtLink to="/about">About</NuxtLink>
         </li>
+        <li>
+          <NuxtLink to="/login">Log In</NuxtLink>
+        </li>
         <li tabindex="0">
           <a>
             Parent
