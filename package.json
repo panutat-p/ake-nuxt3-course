@@ -8,9 +8,12 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.0.4",
+    "@vueuse/nuxt": "^8.5.0",
     "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
-    "daisyui": "^2.14.3"
+    "@formkit/nuxt": "^1.0.0-beta.8",
+    "daisyui": "^2.14.3",
+    "sweetalert2": "^11.4.15"
   }
 }

@@ -46,20 +46,28 @@ npm run preview
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
 
+```shell
+npm i --save-dev @nuxtjs/tailwindcss
+# add module in nuxt.config.ts
+npx tailwindcss init
+
+npm i daisyui
+# add plugin in tailwind.config.js
+
+npm i @formkit/nuxt
+# add module in nuxt.config.ts
+# add them via CDN link in meta in nuxt.config.ts
+
+npm i sweetalert2
+# add CSS in nuxt.config.ts
+
+npm i -D @vueuse/nuxt
+# add module in nuxt.config.ts
+```
+
 https://tailwindcss.nuxtjs.org/setup
 
-```shell
-npm install --save-dev @nuxtjs/tailwindcss
-# add module in nuxt config
-npx tailwindcss init
-```
-
 https://daisyui.com/docs/install/
-```shell
-npm i daisyui
-# add plugin in tailwind config
-```
-
 
 https://v3.nuxtjs.org/api/configuration/nuxt.config
 
@@ -68,3 +76,9 @@ https://v3.nuxtjs.org/guide/directory-structure/composables/
 https://v3.nuxtjs.org/guide/features/runtime-config/
 
 https://v3.nuxtjs.org/guide/features/data-fetching/
+
+https://formkit.com/
+
+https://vueuse.org/
+
+
