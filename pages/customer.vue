@@ -2,7 +2,7 @@
 // const {data} = await useAsyncData('user', () => $fetch('api/contact'));
 // const {data, pending} = await useLazyAsyncData('user', () => $fetch('api/contact')); // does not block navigation
 const {data} = await useFetch('api/contact');
-console.log(data);
+console.log(`contact: ${data}`);
 const {data: apiVersion, pending: isPending} = await useLazyFetch(
     'https://api.codingthailand.com/api/version',
     { pick: ['data'] }

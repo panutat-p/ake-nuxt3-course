@@ -4,8 +4,8 @@ definePageMeta({
 })
 
 const config = useRuntimeConfig();
-console.log(config.public.baseURL);
-console.log(config.apiKey); // got undefined
+console.log(`public runtime config: ${config.public.baseURL}`); // expose to client
+console.log(`private API key: ${config.apiKey}`); // got undefined 👍🏻
 </script>
 
 <template>

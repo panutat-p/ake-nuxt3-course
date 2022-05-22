@@ -4,10 +4,9 @@ import {useLogIn} from "~/composables/use-auth";
 import {useStorage} from "@vueuse/nuxt/node_modules/@vueuse/core";
 
 async function logIn(data) {
-  console.log(data);
+  console.log(`logIn(${data})`);
   const {r, e} = await useLogIn(data.email, data.password);
-  console.log(r);
-  console.log(e);
+  console.log(`logIn() -> r: ${r} e: ${e}`)
   if (e.value) {
     Swal.fire({
       icon: 'error',
@@ -16,6 +15,13 @@ async function logIn(data) {
   }
   if (r.value) {
     useStorage('nuxtToken', r.value);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Logged In',
+      showConfirmButton: false,
+      timer: 1000
+    })
     navigateTo('/member');
   }
 }
