@@ -1,4 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useStorage } from '@vueuse/nuxt/node_modules/@vueuse/core';
+import Swal from 'sweetalert2';
+
+const profile = await useGlobalProfile();
+console.log('useGlobalProfile on header');
+console.log(profile.value);
+
+const logOut = () => {
+  const token = useStorage('nuxtToken', null);
+  token.value = null;
+  navigateTo('/');
+  Swal.fire({
+    icon: 'info',
+    title: 'Logged Out',
+  });
+}
+</script>
 
 <template>
   <div class="navbar bg-primary dark:text-white">
@@ -56,7 +73,7 @@
             </a>
           </li>
           <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><a href="#!" v-on:click.prevent="logOut">Logout</a></li>
         </ul>
       </div>
     </div>
